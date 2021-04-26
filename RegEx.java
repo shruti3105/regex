@@ -22,6 +22,10 @@ public class RegEx {
 		System.out.println("Enter your Phone Number : ");
 		String number = sc.nextLine();
 		System.out.println(validlName(number));
+/*password */
+		System.out.println("Enter your Password : ");
+		String pw = sc.nextLine();
+		System.out.println(validlName(pw));
 
 
 }
@@ -48,6 +52,12 @@ public static boolean validNumber(String number) {
 		String numRegex = "^[0-9]{2}[ ][0-9]{10}";
 		Pattern p = Pattern.compile(numRegex);
 		Matcher m = p.matcher(number);
+		return m.matches();
+	}
+public static boolean validPassWord(String pw) {
+		String pwRegex = "[.*]{8,}";
+		Pattern p = Pattern.compile(pwRegex);
+		Matcher m = p.matcher(pw);
 		return m.matches();
 	}
 
