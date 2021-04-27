@@ -45,7 +45,7 @@ public class RegEx {
 		return m.matches();
 	}
 	public static boolean validNumber(String number) {
-		String numRegex = "^[0-9]{2}[ ][0-9]{10}";
+		String numRegex = "[0-9]{2}[ ][1-9]{1}[0-9]{9}";
 		Pattern p = Pattern.compile(numRegex);
 		Matcher m = p.matcher(number);
 		return m.matches();
