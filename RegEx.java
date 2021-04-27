@@ -55,7 +55,7 @@ public static boolean validNumber(String number) {
 		return m.matches();
 	}
 public static boolean validPassWord(String pw) {
-		String pwRegex = "^(?=.*[A-Z]).{8,}$";
+		String pwRegex = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
 		Pattern p = Pattern.compile(pwRegex);
 		Matcher m = p.matcher(pw);
 		return m.matches();
