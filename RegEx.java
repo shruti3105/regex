@@ -42,19 +42,19 @@ public class RegEx {
 		Matcher m = p.matcher(lname);
 		return m.matches();
 	}
-public static boolean validEmail(String email) {
+	public static boolean validEmail(String email) {
 		String emailRegex = "^(.+)@(.+).(.+)$";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
 		return m.matches();
 	}
-public static boolean validNumber(String number) {
-		String numRegex = "^[0-9]{2}[ ][0-9]{10}";
+	public static boolean validNumber(String number) {
+		String numRegex = "[0-9]{2}[ ][1-9]{1}[0-9]{9}";
 		Pattern p = Pattern.compile(numRegex);
 		Matcher m = p.matcher(number);
 		return m.matches();
 	}
-public static boolean validPassWord(String pw) {
+	public static boolean validPassWord(String pw) {
 		String pwRegex = "[.*]{8,}";
 		Pattern p = Pattern.compile(pwRegex);
 		Matcher m = p.matcher(pw);
