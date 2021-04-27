@@ -32,8 +32,8 @@ public class RegEx {
 		Matcher m = p.matcher(lname);
 		return m.matches();
 	}
-public static boolean validEmail(String email) {
-		String emailRegex = "[a-zA-Z]+[@][a-z]+[a-z]{2,3}";
+	public static boolean validEmail(String email) {
+		String emailRegex = "[a-zA-Z]+[@][a-z]+[\.][a-z]{2,3}";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
 		return m.matches();
