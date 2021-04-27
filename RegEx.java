@@ -18,7 +18,13 @@ public class RegEx {
 		System.out.println("Enter your Email : ");
 		String email = sc.nextLine();
 		System.out.println(validlName(email));
+		
+/*phone number */
+		System.out.println("Enter your Phone Number : ");
+		String number = sc.nextLine();
+		System.out.println(validlName(number));
 }
+
 	/* methods */
 	public static boolean validfName(String fname) {
 		String fnameRegex = "[A-Z]{1}[A-Za-z]{2,}";
@@ -32,10 +38,16 @@ public class RegEx {
 		Matcher m = p.matcher(lname);
 		return m.matches();
 	}
-public static boolean validEmail(String email) {
-		String emailRegex = "[a-zA-Z]+[@][a-z]+[a-z]{2,3}";
+	public static boolean validEmail(String email) {
+		String emailRegex = "[a-zA-Z]+[@][a-z]+[\.][a-z]{2,3}";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
+		return m.matches();
+	}
+	public static boolean validNumber(String number) {
+		String numRegex = "^[0-9]{2}[ ][0-9]{10}";
+		Pattern p = Pattern.compile(numRegex);
+		Matcher m = p.matcher(number);
 		return m.matches();
 	}
 }
