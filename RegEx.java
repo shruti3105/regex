@@ -33,7 +33,7 @@ public class RegEx {
 		return m.matches();
 	}
 public static boolean validEmail(String email) {
-		String emailRegex = "^(.+)@(.+).(.+)$";
+		String emailRegex = "[a-zA-Z]+[@][a-z]+[a-z]{2,3}";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
 		return m.matches();
