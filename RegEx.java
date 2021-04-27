@@ -43,7 +43,7 @@ public class RegEx {
 		return m.matches();
 	}
 public static boolean validEmail(String email) {
-		String emailRegex = "[a-zA-Z\\.]+[@][a-z]+[\\.][a-z\\.]{2,3}";
+		String emailRegex = "^[a-z][a-z\\.]+[@][a-z]+[\\.][a-z\\.]{2,3}";
 		Pattern p = Pattern.compile(emailRegex);
 		Matcher m = p.matcher(email);
 		return m.matches();
@@ -55,7 +55,7 @@ public static boolean validNumber(String number) {
 		return m.matches();
 	}
 public static boolean validPassWord(String pw) {
-		String pwRegex = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+		String pwRegex = "^(?=.*[A-Z])(?=.*[0-9])*[$&+,:;=\\\\?@#|/'<>.^*()%!-](?=.*[A-Z])(?=.*[0-9])*.{8,}$";
 		Pattern p = Pattern.compile(pwRegex);
 		Matcher m = p.matcher(pw);
 		return m.matches();
